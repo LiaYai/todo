@@ -24,20 +24,6 @@ export const TaskList = ({ initialTasks }: TaskListProps) => {
     }
   }, [tasks, sortType]);
 
-  React.useEffect(() => {
-    const handleBlurInput = () => {
-      setTimeout(() => {
-        document.documentElement.style.transform = 'scale(1)';
-      }, 300);
-    };
-      const input = document.querySelector('.add-task-input');
-      if (!input) return;
-      input.addEventListener('blur', handleBlurInput);
-      return () => {
-        input.removeEventListener('blur', handleBlurInput);
-      };
-  }, []);
-
   const handleCheck = (taskId: string) => {
     setTasks((prevTasks) =>
       prevTasks.map((task) =>

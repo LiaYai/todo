@@ -27,6 +27,7 @@
   border: 1px solid var(--text-color);
   border-radius: 4px;
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 .checkbox:checked + .checkmark {
@@ -51,11 +52,4 @@
 
 .checkbox:checked + .checkmark::after {
   display: block;
-  animation: bounce 0.3s ease;
-}
-
-@keyframes bounce {
-  0% { transform: rotate(45deg); }
-  50% { transform: rotate(225deg); }
-  100% { transform: rotate(405deg); }
 }

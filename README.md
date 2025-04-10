@@ -17,8 +17,7 @@
 
 ## Запуск проекта
 ```bash
-git clone https://github.com/ваш-репозиторий.git
-cd task-manager
+git clone
 npm install
 npm start
 ```

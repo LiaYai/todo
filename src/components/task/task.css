@@ -5,6 +5,57 @@
   background-color: var(--task-bg-color);
 }
 
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
 .completed {
   text-decoration: line-through;
+}
+
+.checkbox {
+  display: none;
+}
+
+.checkmark {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border: 1px solid var(--text-color);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.checkbox:checked + .checkmark {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  position: relative;
+}
+
+
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox:checked + .checkmark::after {
+  display: block;
+  animation: bounce 0.3s ease;
+}
+
+@keyframes bounce {
+  0% { transform: rotate(45deg); }
+  50% { transform: rotate(225deg); }
+  100% { transform: rotate(405deg); }
 }

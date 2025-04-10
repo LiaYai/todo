@@ -1,10 +1,10 @@
 :root {
   --background-color: #f1f1f1;
   --task-bg-color: white;
-  --accent-color: #be819e;
+  --accent-color: #91357e;
   --accent-color-dark: #6c324e;
   --text-color: #333;
-  background: url('./assets/foster.jpeg') no-repeat center center fixed;
+  background: url('./assets/foster.jpg') no-repeat center center fixed;
   background-size: cover;
   color: var(--text-color);
   font-size: 16px;
@@ -12,7 +12,7 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    background: url('./assets/arina.jpeg') no-repeat center center fixed;
+    background: url('./assets/arina.jpg') no-repeat center center fixed;
     --accent-color: #a7948a;
     --accent-color-dark: #473023;
   }

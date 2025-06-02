@@ -82,7 +82,7 @@ export const TaskList = ({ initialTasks }: TaskListProps) => {
       </div>
 
       <div className="main-footer">
-        <p className="footer-text">
+        <p className="footer-text" data-testid="tasks-counter">
           Осталось задач - <strong>{tasks.filter((task) => !task.completed).length}</strong>
         </p>
         <div className="navigation">
